@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+<!--Best viewed on chrome!!!!-->
+<meta charset="utf-8">
+<title>Nexus Business Broking</title>
+<script src="sheets/font-awesome-icons.txt"></script>
+<script src="sheets/scrollingscript.txt"></script>
+<link rel="stylesheet" type="text/css" href="sheets/style.css">
+<script src="sheets/sticky.txt" type="text/javascript"></script>
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+
+
+</script>
+<style> 
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 0.9;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:0.9 ;}
+}
+
+.popup {
+	width:100%;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+	width:100%;
+    visibility: hidden;
+    background-color: white;
+    color: #3B84D1;
+	font-size:30px;
+	font-weight:bold;
+	opacity:0.9;
+	vertical-align:middle;
+    text-align: center;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+	height:800px;
+    bottom: 125%;
+}
+
+/* Popup arrow 
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}*/
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+</style>
+</head>
+
+<body>
+<div id="thetheoryofeverything">
+<div id="header">
+	<div id="nexustitle">Nexus Business Brokers</div>
+    <div id="threeterms">
+    <table>
+        <td>Property Sales</td>
+        <td>Property Management</td>
+        <td>Business Brokers</td>
+    </table>
+    </div>
+    
+    
+    <div id="sticky-anchor"></div>
+ 
+<div id="sticky">
+<nav><a href="index.html" title="home">home</a>
+<a href="for.sale.html" title="For Sale">For Sale</a>
+<a href="confidentiality.agreement.html" title="Confidentiality Agreement">Confidentiality Agreement</a>
+<a href="appraisal.html" title="Free Appraisal">Appraisal</a>
+<a href="company.profile.html" title="Company profile">Company Profile</a>
+<a href="contact.us.html" title="Contact Us">Contact us</a>
+</nav>
+</div>
+</div>
+<!--<div id="headerphoto"><p></p>
+<img src="images/space-desk-workspace-coworking.jpg" width="99%"></</div>-->
+
+
+<div id="content">
+<h1>What's my business/property worth?</h1>
+<p></p>
+
+Enter your details to arrange a complimentary, no obligation market appraisal of your business.
+<p></p>
+<div id="form">
+<form>
+<table>
+<tr> 
+<td> 
+<label for="first-name">First name</label> <br>
+ <input type="text" name="firstname" placeholder="Your name..">
+</td>
+<td>
+ <label for="last-name">Last name</label> <br>
+ <input type="text" name="firstname" placeholder="Your name..">
+</td>
+</tr>
+
+<tr>
+<td> 
+ <label for="email">Email</label> <br>
+ <input type="text" name="email" placeholder="Your e-mail...">
+ </td>
+</tr>
+
+<tr> 
+<td> 
+<label for="phone-number">Contact Number (M)</label> <br>
+ <input type="text" name="Mobile" placeholder="Your mobile number.">
+</td>
+<td>
+ <label for="phone-number">Contact Number (H)</label> <br>
+ <input type="text" name="Home" placeholder="Your home number">
+</td>
+</tr>
+
+<tr>  
+<td>
+ <label for="Address">Address of Business or Property to be appraised</label> <br>
+ <input type="text" name="Address" placeholder="Address...">
+</td>
+</tr>
+
+<tr> 
+<td> 
+  <label for="State">State</label>
+    <select id="State" name="State">
+      <option value="NSW">New South Wales</option>
+      <option value="VIC">Victoria</option>
+      <option value="QLD">Queensland</option>
+      <option value="WA">Western Australia</option>
+      <option value="NT">Northern Territory</option>
+      <option value="SA">South Australia</option>
+      <option value="TAS">Tasmania</option>
+    </select>
+</td>
+</tr>
+</table>
+<table>
+<tr>
+<td style="width:100%">
+ <label for="Notes">Additional Notes - Preferred dates or times</label> <br>
+<input type="text" class="notes" name="Notes" placeholder="">
+
+</form>
+</td>
+</tr>
+</table>
+
+</div>
+
+<p>
+
+<div class="popup" onclick="myFunction()"> 
+    <a href="#thetheoryofeverything" class="submit"><input type="submit" class="submit" value="submit"></a>
+    
+    <div class="popuptext" id="myPopup">Your request has been successfully submitted!</div>
+</div>
+
+
+</p>
+</div>
+</div>
+</body>
+</html>
