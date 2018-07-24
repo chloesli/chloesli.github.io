@@ -63,6 +63,10 @@ body, html{
     #anchor1 {
       margin-top:-167.33px;
     }
+	
+	#navbar {
+		min-height: 167.33px; 	
+	}
 }
 
 
@@ -101,19 +105,10 @@ a:visited {
     -webkit-transition: all 0.2s ease-in-out; /*this works in chrome*/
 }
 
-/*
-#navbar {
-  width: 100%;
-  bottom: 0px; 
-  color:white; 
-  background-color:black; 
-  text-align:center;
-  z-index: 1000; 
-}*/
 
 #navbar {
   overflow: hidden;
-  background-color: #191919;
+  background-color: #FF9E9E;
   text-align:center;
   position:fixed;
   top:0px;
