@@ -5,6 +5,17 @@ body, html{
  
 }
 
+/*change the color of the highlight*/
+::-moz-selection { /* Code for Firefox */
+    color:white;
+    background:#87CCE9;
+}
+ 
+::selection {
+    color:white;
+    background:#87CCE9;
+}
+
 #anchor1 {
   margin-top:-83.63px;
 }
