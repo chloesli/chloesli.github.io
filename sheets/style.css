@@ -1,8 +1,7 @@
 body, html{ 
   height: 100%;
   margin: 0;
-  font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
- 
+  font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
 }
 
 /*change the color of the highlight*/
@@ -95,7 +94,6 @@ body, html{
   left: 0px;
   top: 35%;
   width: 100%; 
-  text-transform:uppercase;
   text-align: center;
   font-size: 35px;
 	transition: all 0.2s ease-in-out;
