@@ -1,4 +1,4 @@
-body, html{ 
+body, html{
   height: 100%;
   margin: 0;
   font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
@@ -9,7 +9,7 @@ body, html{
     color:white;
     background:#87CCE9;
 }
- 
+
 ::selection {
     color:white;
     background:#87CCE9;
@@ -24,7 +24,7 @@ body, html{
     box-sizing: border-box;
     background:white;
     height:auto;
-    padding:50px 50px 50px 50px; 
+    padding:50px 50px 50px 50px;
     min-height:100%;
     margin-top:83.63px;
 }
@@ -39,7 +39,7 @@ body, html{
   background-size: cover;
   outline:3px solid #333;
   outline-offset: -50px;
-  
+
   z-index: 100;
 }
 
@@ -57,8 +57,8 @@ body, html{
     -webkit-transition: all 0.2s ease-in-out; /*this works in chrome*/
 }
 
-#title img{ 
-	border-radius: 50%; 
+#title img{
+	border-radius: 50%;
 	padding: 10px;
 	border: 2px solid #333;
 	height: 150px;
@@ -81,19 +81,19 @@ body, html{
     #anchor1 {
       margin-top:-167.33px;
     }
-	
+
 	#navbar {
-		min-height: 167.33px; 	
+		min-height: 167.33px;
 	}
 }
 
 
 #title {
   position: absolute;
-  color: white; 
+  color: white;
   left: 0px;
   top: 35%;
-  width: 100%; 
+  width: 100%;
   text-align: center;
   font-size: 35px;
 	transition: all 0.2s ease-in-out;
@@ -107,7 +107,7 @@ body, html{
 }
 
 a:link {
-  color:#8FCADF; 
+  color:#8FCADF;
   text-decoration:none;
 	transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out; /*this works in firefox*/
@@ -115,7 +115,7 @@ a:link {
 }
 
 a:visited {
-  color:#8FCADF; 
+  color:#8FCADF;
   text-decoration:none;
   	transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out; /*this works in firefox*/
@@ -133,7 +133,7 @@ a:visited {
   width:100%;
 }
 
-/* navigation hover effect and style */ 
+/* navigation hover effect and style */
 nav a:link{
     text-transform:uppercase;
     display:inline-block;
@@ -145,17 +145,17 @@ nav a:link{
     letter-spacing:2px;
 	border:2px solid transparent;
 }
- 
-nav { 
+
+nav {
     letter-spacing:1px;
     background-color:white;
-}    
-
-nav a:visited {
-    color:#8FCADF; 
 }
 
-nav a:hover { 
+nav a:visited {
+    color:#8FCADF;
+}
+
+nav a:hover {
     border-left: 2px solid #4D4D4D;
     border-right: 2px solid #4D4D4D;
     background:#333;
@@ -168,18 +168,18 @@ nav a:hover {
 
 #navbar a.active {
   background-color: #4CAF50;
-  color: #8FCADF; 
+  color: #8FCADF;
 }
 
 .flex-grid h1 {
-	font-size: 20px; 
-	border-bottom:1px solid white; 
-	padding-bottom:10px; 
+	font-size: 20px;
+	border-bottom:1px solid white;
+	padding-bottom:10px;
 }
 
 .flex-grid h2 {
 	font-weight:bold;
-	font-size:16px; 
+	font-size:16px;
 }
 
 .flex-grid {
@@ -190,7 +190,7 @@ nav a:hover {
   flex: 1;
 }
 
-.flex-grid { 
+.flex-grid {
   margin: 0 0 20px 0;
 }
 .col {
@@ -199,8 +199,8 @@ nav a:hover {
   margin:10px;
   background:#8FCADF;
   color:white;
-  font-size: 14px; 
-  line-height:16px; 
+  font-size: 14px;
+  line-height:16px;
   box-sizing:border-box;
 }
 
@@ -214,4 +214,3 @@ nav a:hover {
     }
   }
 }
-
