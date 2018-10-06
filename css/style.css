@@ -12,12 +12,12 @@
 /*change the color of the highlight*/
 ::-moz-selection { /* Code for Firefox */
     color:white;
-    background:#87CCE9;
+    background:#95C1DA;
 }
 
 ::selection {
     color:white;
-    background:#87CCE9;
+    background:#95C1DA;
 }
 
 body {
@@ -86,7 +86,7 @@ h1 {
 
 
 a:link {
-  color:#8FCADF;
+  color:#95C1DA;
   text-decoration:none;
 	transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out; /*this works in firefox*/
@@ -94,7 +94,7 @@ a:link {
 }
 
 a:visited {
-  color:#8FCADF;
+  color:#95C1DA;
   text-decoration:none;
   	transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out; /*this works in firefox*/
@@ -233,6 +233,10 @@ nav a:hover {
     font-family: 'Raleway', sans-serif;
 }
 
+.about a:link, .about a:visited {
+  color:#7c9eff;
+}
+
 .links {
     width: 100%;
     text-align:center;
@@ -243,8 +247,9 @@ nav a:hover {
 .links2 {
     width: 100%;
     text-align:center;
-    border: 1px solid white;
-    color: white;
+    opacity:0.8;
+    background-color: #c5d2f9;
+    color: #333;
 
 }
 
