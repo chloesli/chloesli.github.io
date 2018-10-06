@@ -1,13 +1,13 @@
 new fullpage('#fullpage', {
     licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-    sectionsColor: ['white', '#f7cac9', '#91A8d0', '#ADD8E6'],
-    menu: '#menu',  
-    lockAnchors: false,  
-    anchors:['page1', 'page2','page3','page4'],  
-    navigation: false,  
-    navigationPosition: 'right',  
-    navigationTooltips: ['firstSlide', 'secondSlide'],  showActiveTooltip: false,  
-    slidesNavigation: true,  
+    sectionsColor: ['white', 'white'],
+    menu: '#menu',
+    lockAnchors: false,
+    anchors:['page1', 'page2','page3','page4'],
+    navigation: false,
+    navigationPosition: 'right',
+    navigationTooltips: ['Home', 'Projects'],  showActiveTooltip: false,
+    slidesNavigation: true,
     slidesNavPosition: 'bottom',
 
     lazyLoading: true,
@@ -21,4 +21,3 @@ new fullpage('#fullpage', {
 	onSlideLeave: function(section, origin, destination, direction){}
 
 });
-
