@@ -10,8 +10,6 @@ new fullpage('#fullpage', {
     slidesNavigation: true,
     slidesNavPosition: 'bottom',
 
-    lazyLoading: true,
-
     onLeave: function(origin, destination, direction){},
 	afterLoad: function(origin, destination, direction){},
 	afterRender: function(){},
