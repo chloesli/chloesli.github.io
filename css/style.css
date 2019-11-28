@@ -36,7 +36,7 @@ h1 {
 
 #header {
   background:white;
-  background-image:url(../images/blank-business-composition-373076.jpg);
+  background-image:url(../site-images/blank-business-composition-373076.jpg);
   height:calc(100% - 80.14px);
   margin-top: 80.14px;
   background-position: center;
@@ -292,13 +292,13 @@ linksnav a:link, linksnav a:visited{
 }
 
 #slide1{
-  background-image:url(../images/vision.jpg);
+  background-image:url(../site-images/vision.jpg);
 
 }
 
 /* #F7C9A5*/
   #slide2{
-    background-image:url(../images/society.jpg);
+    background-image:url(../site-images/society.jpg);
 
   }
 	#slide3{
@@ -316,7 +316,7 @@ linksnav a:link, linksnav a:visited{
 	}
 
   #slide4{
-    background-image:url(../images/sydneynew.jpg);
+    background-image:url(../site-images/sydneynew.jpg);
   }
 
   @media only screen and (max-width: 860px) {
