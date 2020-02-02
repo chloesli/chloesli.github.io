@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    span.complete{
+        text-decoration: line-through;
+    }
+    span.incomplete {
+        color: tomato;
+    }
+    </style>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+        <span v-if="visible">This is hidden.</span>
+        <ol>
+            <li v-for="item in items">
+                <!-- Bind a class depending on variable item.complete-->
+                <span v-bind:class="{complete: item.complete, incomplete: !item.complete}">
+                    {{item.text}}
+                </span>
+                
+            </li>
+        </ol>
+        <p>
+            {{count}}
+        </p>
+            <button @click="addOne">+1</button v-on:click="addOne" >
+            <button v-on:click="subOne">-1</button>
+            <!-- v-model for 2 way binding -->
+            <input type="number" v-model:value="count">
+    </div>
+    <!-- Vue.js development script-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello world!',
+                visible: false,
+                count: 0,
+                items: [
+                    {text: 'Hellodsadsa', complete: false},
+                    {text: 'dsadsadsadasd', complete: true},
+                    {text: '????', complete: false}
+                ]
+            },
+            methods: {
+                addOne: function() {
+                    this.count = parseInt(this.count) + 1;
+                },
+                subOne: function() {
+                    this.count = parseInt(this.count) - 1;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
