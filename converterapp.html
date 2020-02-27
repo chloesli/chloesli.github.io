@@ -4,55 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/gif" href="site-images/cutefavicon.gif">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins:500&display=swap" rel="stylesheet">
     <title>Learning Vue.js</title>
     <style>
-    span.complete{
-        text-decoration: line-through;
+    * {
+        box-sizing: border-box;
+        margin:0px;
     }
-    span.incomplete {
-        color: tomato;
+    body {
+        font-size:14px;
+        font-family: 'Open Sans';
+        background-color:#F3F8FF;
+    }
+    h1 {
+        font-family: 'Poppins', ;
+    }
+    .header {
+        padding:20px;
     }
     textarea{
         height: 200px;
+        width:100%;
+        border: 2px solid #DDE2E8;
+        padding:10px;
     }
-    .hide {
-        display:none;
-        visibility: hidden;
+    textarea:focus {
+        outline: none !important;
+        border:2px solid #ADE1D2;
+    }
+    .wrapper {
+        display:flex;
+        flex-direction: row;
+    }
+    button.but {
+        display:inline-block;
+        font-family: 'Open Sans';
+        letter-spacing:1px;
+        margin:0px;
+        width:100%;
+        padding:10px 20px;
+        margin-left:20px;
+        margin-right:20px;
+        font-size:18px;
+        text-transform: capitalize;
+        border:none;
+        font-weight:bold;
+        color:#373D20;
+    }
+    .teal {
+        background-color:#D1F3F9;
+    }
+    .card {
+        padding:20px;
+    }
+    .green {
+        background-color:#D1F4D1
+    }
+    .w-50 {
+        width: 50%;
+    }
+    .w-100 {
+        width:100%;
     }
     </style>
 </head>
 <body>
     <div id="app">
-        <div class="learning-cont" v-bind:class="{hide: hideLearning, show: !hideLearning}">
-        {{message}}
-        <span v-if="visible">This is hidden.</span>
-        <ol>
-            <li v-for="item in items">
-                <!-- Bind a class depending on variable item.complete-->
-                <span v-bind:class="{complete: item.complete, incomplete: !item.complete}">
-                    {{item.text}}
-                </span>
-                
-            </li>
-        </ol>
-        <p>
-            {{count}}
-        </p>
-            <button @click="addOne">+1</button v-on:click="addOne" >
-            <button v-on:click="subOne">-1</button>
-       
-            <!-- v-model for 2 way binding -->
-            <textarea type="number" v-model:value="count"> </textarea>
-        </div>
-            <h1>Omnibug</h1>
-            <textarea type="text" v-model:value="omnibug"> </textarea> 
-            <h1>Order</h1>
-            <textarea type="text" v-model:value="order"> </textarea> 
+        <div class="header">
+            <h1>
+                ConverterApp! 
+            </h1>
             <p>
-                <button v-on:click="convert">convert</button>
+                Translate your Omnibug payload into the correct order you need for testing! 
             </p>
-            <h1>Result</h1>
-            <textarea type="text" v-model:value="result"> </textarea>
+        </div>
+        <div class="wrapper">
+            <div class="card w-50">
+                <h1>Omnibug Payload</h1>
+                <textarea type="text" v-model:value="omnibug"> </textarea> 
+            </div>
+            <div class="card w-50">
+                <h1>Order</h1>
+                <textarea type="text" v-model:value="order"> </textarea> 
+            </div>
+        </div>
+        <div class="wrapper">
+                <button class="but w-50 green" v-on:click="convert">convert</button>
+                <button class="but w-50 teal" v-on:click="copy">copy result</button>
+        </div>
+        <div class="wrapper" >
+            <div class="card w-100">
+                <h1>Result</h1>
+            <textarea style="height:auto" id="result" type="text" v-model:value="result"> </textarea>
+            </div>
+            
+        </div>
+            
         
 
     </div>
@@ -169,7 +216,15 @@ prop64`,
                         (this.mapping[orderarr[i]] != undefined) ? this.result += this.mapping[orderarr[i]] + "\n" : this.result += "\n";
                     }
                     console.log(this.mapping);
+                },
+                copy: function() {
+                    document.getElementById("result").select();
+                    document.execCommand('copy');
                 }
+                
+            },
+            components: {
+                
             }
         
         })
