@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/gif" href="site-images/cutefavicon.gif">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins:500&display=swap" rel="stylesheet">
+    <title>Learning Vue.js</title>
+    <style>
+    * {
+        box-sizing: border-box;
+        margin:0px;
+    }
+    body {
+        font-size:14px;
+        font-family: 'Open Sans';
+        background-color:#F3F8FF;
+    }
+    h1 {
+        font-family: 'Poppins', ;
+    }
+    .header {
+        padding:20px;
+    }
+    textarea{
+        height: 50px;
+        width:100%;
+        border: 2px solid #DDE2E8;
+        font-family: 'Open Sans';
+        font-size:12px;
+        padding:10px;
+    }
+    textarea:focus {
+        outline: none !important;
+        border:2px solid #ADE1D2;
+    }
+    .wrapper {
+        display:flex;
+        flex-direction: row;
+    }
+    button.but {
+        display:inline-block;
+        font-family: 'Open Sans';
+        letter-spacing:1px;
+        margin:0px;
+        width:100%;
+        padding:10px 20px;
+        margin-left:20px;
+        margin-right:20px;
+        font-size:18px;
+        text-transform: capitalize;
+        border:none;
+        font-weight:bold;
+        color:#373D20;
+        border:2px solid transparent;
+    }
+    button:focus{
+        outline: none !important;
+        border:2px solid #ADE1D2;
+    }
+    .teal {
+        background-color:#D1F3F9;
+    }
+    .card {
+        padding:20px;
+    }
+    .green {
+        background-color:#D1F4D1
+    }
+    .w-50 {
+        width: 50%;
+    }
+    .w-100 {
+        width:100%;
+    }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <h1>
+                UNSW Citation
+            </h1>
+            <p>
+                UNSW style Harvard referencing made easy? 
+            </p>
+        </div>
+        <div class="wrapper">
+            <div class="card w-50">
+                <h1>Author</h1>
+                <textarea type="text" v-model:value="author"> </textarea> 
+            </div>
+            <div class="card w-50">
+                <h1>Year</h1>
+                <textarea type="text" v-model:value="year"> </textarea> 
+            </div>
+            <div class="card w-50">
+                <h1>Page Title</h1>
+                <textarea type="text" v-model:value="title"> </textarea> 
+            </div>
+            <div class="card w-50">
+                <h1>Accessed</h1>
+                <textarea type="text" v-model:value="date"> </textarea> 
+            </div>
+            <div class="card w-50">
+                <h1>URL</h1>
+                <textarea type="text" v-model:value="url"> </textarea> 
+            </div>
+        </div>
+        <div class="wrapper">
+                <button class="but w-50 green" v-on:click="generate">Generate Citation</button>
+                <button class="but w-50 teal" v-on:click="copy">copy result</button>
+        </div>
+        <div class="wrapper" >
+            <div class="card w-100">
+                <h1>Result</h1>
+            <textarea id="result" type="text" v-model:value="result"> </textarea>
+            </div>
+            
+        </div>
+
+    </div>
+    <!-- Vue.js development script-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                hideLearning: true,
+                message: 'Hello world!',
+                visible: false,
+                author: "",
+                year: "",
+                date: "",
+                url: "",
+                title: "",
+                count: 0,
+                items: [
+                    {text: 'Hellodsadsa', complete: false},
+                    {text: 'dsadsadsadasd', complete: true},
+                    {text: '????', complete: false}
+                ],
+                result:"Press generate to show your result!",
+            },
+            methods: {
+                generate: function() {
+                    this.result = `${this.author} ${this.year}, ${this.title}, accessed ${this.date}, <${this.url}>`;
+                },
+                copy: function() {
+                    document.getElementById("result").select();
+                    document.execCommand('copy');
+                }
+                
+            },
+            components: {
+                
+            }
+        
+        })
+    </script>
+</body>
+</html>
